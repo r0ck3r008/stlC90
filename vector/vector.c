@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 #include<commons/utils.h>
-#include<vector/vector.h>
+#include<vector.h>
 
 /* Private */
 Vector *
