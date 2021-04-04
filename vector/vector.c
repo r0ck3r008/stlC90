@@ -77,8 +77,10 @@ vector_cap(Vector *vec)
 void *
 vector_at(Vector *vec, int pos)
 {
-	if(pos >= vec->size || pos < 0)
+	if(pos >= vec->size || pos < -1)
 		return NULL;
+	else if(pos == -1)
+		pos = (vec->size) - 1;
 
 	return (vec->arr[pos]);
 }
