@@ -15,6 +15,6 @@ void stack_deinit(Stack *);
 void *stack_top(Stack *);
 bool stack_empty(Stack *);
 void stack_push(Stack *, void *);
-void stack_pop(Stack *);
+void *stack_pop(Stack *);
 
 #endif /* STACK_H */

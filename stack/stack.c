@@ -44,10 +44,13 @@ stack_push(Stack *stk, void *memb)
 	stk->filled = true;
 }
 
-void
+void *
 stack_pop(Stack *stk)
 {
-	vector_popBack(stk->vec);
+	void *ret = vector_popBack(stk->vec);
+
 	if(vector_size(stk->vec) == 0)
 		stk->filled = false;
+
+	return ret;
 }
