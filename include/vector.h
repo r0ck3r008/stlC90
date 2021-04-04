@@ -9,6 +9,7 @@ typedef struct Vector {
 Vector *vector_init(int);
 void vector_deinit(Vector *);
 void vector_pushBack(Vector *, void *);
+void *vector_popBack(Vector *);
 int vector_size(Vector *);
 int vector_cap(Vector *);
 void *vector_at(Vector *, int);

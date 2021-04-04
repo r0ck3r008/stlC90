@@ -38,6 +38,19 @@ vector_deinit(Vector *vec)
 	free(vec);
 }
 
+void *
+vector_popBack(Vector *vec)
+{
+	int size = --(vec->size);
+	if(size == -1)
+		return NULL;
+
+	void *ret = vec->arr[size];
+	vec->arr[size] = NULL;
+
+	return ret;
+}
+
 void
 vector_pushBack(Vector *vec, void *memb)
 {
